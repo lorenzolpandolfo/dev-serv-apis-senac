@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="minhaDiv">
+        Oi
+    </div>
+
+    <script>
+        var minhaDiv = document.getElementById("minhaDiv");
+        minhaDiv.style.color = "white";
+        // comentário
+        minhaDiv.style.width = "50%";
+        minhaDiv.style.background = "blue";
+        minhaDiv.innerHTML += " <strong>galerinha</strong>"
+    </script>
+    <hr>
+    <input type="text" placeholder="Nome do Produto: " id="txtNome" />
+    <button onclick="adicionar()"> Adicionar </button>
+    <h1>Lista de Produtos</h1>
+    <div id="divProdutos"></div>
+
+    <script>
+        function adicionar(){
+            var divProdutos = document.getElementById("divProdutos");
+            var nome = document.getElementById("txtNome").value;
+            if( nome != "" ){
+                divProdutos.innerHTML += nome + "<br>"
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>
